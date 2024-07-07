@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        /*Basic styling for the body */
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+/Styling for the header section/
+header {
+    background-color: #333333;
+    color: rgb(255, 255, 255);
+    padding: 1em 0;
+    text-align: center;
+}
+/* Remove default list styling for the navigation*/
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+/* Display navigation items inline and sapacing*/
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+/*Style navigation links */
+nav ul li a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+/* styling for sections*/
+section {
+    padding: 2em;
+}
+/* styling for footer section*/
+footer {
+    background-color: #333333;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 1em 0;
+}
+/*Media query for responsive design on small screens */
+@media (max-width: 600px) {
+    nav ul li {
+        display: block;
+        margin: 5px 0;
+    }
+}
+
+    </style>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Football Game</title>
+    <!--Link to external CSS file-->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <script>
+        // wait for the DOM content to load before running the script
+    document.addEventListener('DOMContentLoaded', () => {
+        // set the inner HTML of the quiz container
+        const quizContainer = document.createElement('div');
+        quizContainer.innerHTML = `
+            <h3>Football Quiz</h3>
+            <h4>Question 1</h4>
+            <p>Who won FIFA Cup 2018 ?</p>
+            <button id="answer1">Brazil</button>
+            <button id="answer2">France</button>
+            <button id="answer3">Argentina</button>
+            <p id="result"></p>
+        `;
+        // Append the quiz container to the interactive section
+        document.getElementById('interactive').appendChild(quizContainer);
+    // Add event listeners to the buttton to handel user input
+        document.getElementById('answer1').addEventListener('click', () => {
+            document.getElementById('result').textContent = 'InCorrect!';
+        });
+        document.getElementById('answer2').addEventListener('click', () => {
+            document.getElementById('result').textContent = 'Correct!';
+        });
+        document.getElementById('answer3').addEventListener('click', () => {
+            document.getElementById('result').textContent = 'Incorrect!';
+        });
+    });
+        </script>
+        <script>
+        document.addEventListener('DOMContentLoaded', () => {
+        const quizContainer = document.createElement('div');
+        quizContainer.innerHTML = `
+            <h4>Question 2</h4>
+            <p>How many time Ronaldo won ballon d'or Award?</p>
+            <button id="answer1">7</button>
+            <button id="answer2">4</button>
+            <button id="answer3">5</button>
+            <p id="result"></p>
+        `;
+        document.getElementById('interactive').appendChild(quizContainer);
+    
+        document.getElementById('answer1').addEventListener('click', () => {
+            document.getElementById('result').textContent = 'InCorrect!';
+        });
+        document.getElementById('answer2').addEventListener('click', () => {
+            document.getElementById('result').textContent = 'InCorrect!';
+        });
+        document.getElementById('answer3').addEventListener('click', () => {
+            document.getElementById('result').textContent = 'Correct!';
+        });
+    });
+    </script>
+    
+    
+    <h1>Football Game</h1>
+    <!--Header sections containing navigation bar and title-->
+    <header>
+        <nav>
+    <ul>
+        <li><a href="file:///C:/Users/rohit/OneDrive/Documents/GitHub/VSC/overview.html">Overview</a></li>
+        <li><a href="file:///C:/Users/rohit/OneDrive/Documents/GitHub/VSC/Highlights.html">Highlights</a></li>
+        <li><a href="file:///C:/Users/rohit/OneDrive/Documents/GitHub/VSC/Beginning.html">Get Started</a></li>
+        <li><a href="file:///C:/Users/rohit/OneDrive/Documents/GitHub/VSC/Interactive.html">Interactive</a></li>
+    </ul>
+        </nav>
+    </header>
+    <!--Game overview section-->
+
+    <section id="overview">
+        <h2>Game Overview</h2>
+        <p>Football is the most popular team sport in the world, where two teams compete to score goals by shooting a ball into the goal post.
+            Each Team consists of 11 players and the fiel measures 120*90 meters.
+        </p>
+        <!--Place holder for an image-->
+        <p>
+            <img src="c:\Users\rohit\Downloads\Football History.jpg" alt="History of Football" width="500">
+        </p>
+    </section>
+<!--Game highlights section-->
+    <section id="highlights">
+        <h2>Game Highlights</h2>
+        <p>Most Famous Game.</p>
+        <p>
+            Important Tournaments in history are:
+             <ul>
+                <li>Fifa World Cup</li>
+                <li>UEFA Champions League</li>
+                <li>Premier League</li>
+             </ul>
+            </p>
+            <!--place holder for an image-->
+            <p>
+                <img src="c:\Users\rohit\Downloads\FIFA-World-Cup.jpg" alt="FIFA world cup" width="500">
+            </p>
+    </section>
+    <!--How to get started section-->
+    <section id="beginning">
+        <h2>How to Begin</h2>
+        <p>
+            Tips for beginners 
+            <ul>
+                <li>necessary equipment</li>
+                <li>basic strategies to start playing basketball</li>
+            </p>
+            <!--Place holder for Video support to beginners-->
+            <p>
+                <a href="https://youtu.be/Phnt5QZ7X7o">Beginner Video</a>
+            </p>
+    </section>
+    <!--Interactive Elements section-->
+    <section id="interactive">
+        <h2>Interactive Element</h2>
+        <p>Interactive content such as a quiz or slideshow.</p>
+    </section>
+    <!--Footer section-->
+    <footer>
+        <p>&copy; 2024 Football Game. All rights reserved.</p>
+        <p><a href="https://www.fifa.com/en">Fifa| The House of Football</a></p>
+        <p><a href="https://www.the-aiff.com/">Official Website for all Indian Football Federation</a></p>
+        <p><a href="https://football-forums.com">Forums</a></p>
+    </footer>
+    <!--Link to external Javascript file-->
+    <script src="script.js"></script>
+</body>
+</html>
